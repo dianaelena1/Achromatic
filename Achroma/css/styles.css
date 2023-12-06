@@ -1,0 +1,258 @@
+/****************************************/
+/*  MAIN APP  */
+/***************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: black !important;
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+  font-family: "PP Supply Mono";
+  text-transform: uppercase;
+}
+
+/****************************************/
+/*  IMG EFFECT  */
+/***************************************/
+
+.items {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 5rem 0;
+  }
+  .items {
+    flex-direction: column;
+  }
+}
+
+.item {
+  background: black;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.1); /*CHANGES WERE MADE HERE */
+  cursor: pointer;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) sepia(0) brightness(1);
+  transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.item-copy {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-copy > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+#item-1 .item-copy-2 {
+  justify-content: flex-end;
+}
+
+#item-2 .item-copy-1 {
+  justify-content: flex-end;
+}
+
+#item-3 .item-copy-2 {
+  justify-content: flex-end;
+}
+
+#item-4 .item-copy-1 {
+  justify-content: flex-end;
+}
+
+#item-5 .item-copy-2 {
+  justify-content: flex-end;
+}
+
+.shape {
+  width: 225px;
+  height: 225px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  font-size: 16px;
+  padding: 150px; /*CHANGES WERE MADE HERE */
+  opacity: 0;
+  transform: scale(0.75);
+  transition: all 1s cubic-bezier(0.9, 0.82, 0.165, 1);
+}
+
+#item-1 .shape {
+  clip-path: polygon(
+    0% 0px,
+    0px 0%,
+    calc(100% - 50px) 0px,
+    100% 50px,
+    100% 100%,
+    calc(100% - 0px) 100%,
+    50px 100%,
+    0px calc(100% - 50px)
+  );
+}
+
+#item-2 .shape {
+  clip-path: polygon(
+    50px 0px,
+    0px 50px,
+    0px 100%,
+    calc(100% - 50px) 100%,
+    100% calc(100% - 50px),
+    100% 100%,
+    100% 0%,
+    0px 0%
+  );
+}
+
+#item-3 .shape {
+  clip-path: polygon(
+    0% 0px,
+    0px 0%,
+    calc(100% - 50px) 0px,
+    100% 50px,
+    100% 100%,
+    calc(100% - 0px) 100%,
+    50px 100%,
+    0px calc(100% - 50px)
+  );
+}
+
+#item-4 .shape {
+  clip-path: polygon(
+    0% 0px,
+    0px 0%,
+    calc(100% - 50px) 0px,
+    100% 50px,
+    100% 100%,
+    calc(100% - 0px) 100%,
+    50px 100%,
+    0px calc(100% - 50px)
+  );
+}
+
+
+#item-5 .shape {
+  clip-path: polygon(
+    0% 0px,
+    0px 0%,
+    calc(100% - 50px) 0px,
+    100% 50px,
+    100% 100%,
+    calc(100% - 0px) 100%,
+    50px 100%,
+    0px calc(100% - 50px)
+  );
+}
+
+.shape {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shape #number {
+  font-family: "Orbitron";
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.item:hover img {
+  transform: scale(1.2);
+  filter: grayscale(0.5) brightness(0.75);
+}
+
+.item:hover .shape {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/****************************************/
+/*  SWIPPER IMG EFFECT  */
+/***************************************/
+
+
+.swiper-wrapper {
+  margin-top: 90px;
+}
+
+.swiper {
+  width: 40%;
+  height: 40%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: 	#4c4852 !important;
+}
+
+.youtube_subscribe {
+  position: absolute;
+  top: -150px;
+  right: 0;
+  z-index: 2;
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 850px;
+  padding-right: 20px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+
